@@ -23,8 +23,8 @@ Aplikasi full-stack untuk mengelola data produk dengan operasi CRUD (Create, Rea
 ## 📁 Struktur Proyek
 
 ```
-product-management/
-├── simple-product-api/           # Backend API
+simple-fullstack-project/
+├── express-backend/           # Backend API
 │   ├── config/
 │   │   └── database.js
 │   ├── controllers/
@@ -35,7 +35,7 @@ product-management/
 │   ├── package.json
 │   └── server.js
 │
-└── product-react-frontend/       # Frontend React
+└── react-frontend/       # Frontend React
     ├── public/
     ├── src/
     │   ├── components/
