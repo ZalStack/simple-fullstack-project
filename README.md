@@ -1,13 +1,13 @@
 # Product Management System - Full Stack Application
 
-## 📝 Deskripsi Proyek
+## 📝 Project Description
 
-Aplikasi full-stack untuk mengelola data produk dengan operasi CRUD (Create, Read, Update, Delete).
+A full-stack application for managing product data with CRUD operations (Create, Read, Update, Delete).
 
 - **Backend API**: Node.js + Express + MySQL
 - **Frontend**: React.js + React Router DOM
 
-## 🚀 Teknologi yang Digunakan
+## 🚀 Technologies Used
 
 ### Backend
 - Node.js & Express.js
@@ -18,9 +18,9 @@ Aplikasi full-stack untuk mengelola data produk dengan operasi CRUD (Create, Rea
 - React 
 - React Router DOM 
 - Vite
-- CSS Murni (tanpa framework)
+- Pure CSS (no framework)
 
-## 📁 Struktur Proyek
+## 📁 Project Structure
 
 ```
 simple-fullstack-project/
@@ -59,37 +59,37 @@ simple-fullstack-project/
     └── package.json
 ```
 
-## ✨ Fitur Aplikasi
+## ✨ Application Features
 
 ### Backend API
-- ✅ RESTful API untuk produk
+- ✅ RESTful API for products
 - ✅ CRUD operations (Create, Read, Update, Delete)
-- ✅ Koneksi MySQL dengan connection pool
+- ✅ MySQL connection with connection pool
 - ✅ Error handling
 
-### Frontend React
-- ✅ Halaman Home
-- ✅ Daftar produk dalam bentuk card
-- ✅ Tambah produk baru
-- ✅ Detail produk
-- ✅ Edit produk
-- ✅ Hapus produk dengan konfirmasi
+### React Frontend
+- ✅ Home page
+- ✅ Product list in card format
+- ✅ Add new product
+- ✅ Product details
+- ✅ Edit product
+- ✅ Delete product with confirmation
 - ✅ Loading states
 - ✅ Error handling
 - ✅ Responsive design
-- ✅ Format currency Rupiah
+- ✅ Indonesian Rupiah currency format
 - ✅ Stock badge (high/medium/low)
 
 ## 📋 Prerequisites
 
-- Node.js (v18 atau lebih baru)
-- npm atau yarn
+- Node.js (v18 or newer)
+- npm or yarn
 - MySQL
 - Git
 
-## 🔧 Instalasi dan Setup
+## 🔧 Installation and Setup
 
-### 1. Setup Database MySQL
+### 1. MySQL Database Setup
 
 ```sql
 CREATE DATABASE product_db;
@@ -108,49 +108,49 @@ CREATE TABLE products (
 
 -- Sample data
 INSERT INTO products (name, price, description, stock) VALUES
-('Laptop ASUS', 8500000, 'Laptop ASUS dengan spesifikasi tinggi', 10),
-('Mouse Logitech', 250000, 'Wireless mouse', 50),
-('Keyboard Mechanical', 750000, 'Keyboard mechanical switch biru', 25);
+('ASUS Laptop', 8500000, 'ASUS laptop with high specifications', 10),
+('Logitech Mouse', 250000, 'Wireless mouse', 50),
+('Mechanical Keyboard', 750000, 'Mechanical keyboard with blue switch', 25);
 ```
 
 ### 2. Backend API
 
 ```bash
-# Masuk ke folder backend
-cd simple-product-api
+# Navigate to backend folder
+cd express-backend
 
 # Install dependencies
 npm install express mysql2 dotenv cors
 
-# Buat file .env
+# Create .env file
 echo "PORT=3000
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_password
 DB_NAME=product_db" > .env
 
-# Jalankan server
+# Run the server
 node server.js
-# atau dengan nodemon
+# or with nodemon
 npx nodemon server.js
 ```
 
-Backend akan berjalan di `http://localhost:3000`
+Backend will run at `http://localhost:3000`
 
-### 3. Frontend React
+### 3. React Frontend
 
 ```bash
-# Masuk ke folder frontend
-cd product-react-frontend
+# Navigate to frontend folder
+cd react-frontend
 
 # Install dependencies
 npm install react-router-dom
 
-# Jalankan aplikasi
+# Run the application
 npm run dev
 ```
 
-Frontend akan berjalan di `http://localhost:5173`
+Frontend will run at `http://localhost:5173`
 
 ## 📚 API Documentation
 
@@ -159,32 +159,32 @@ Frontend akan berjalan di `http://localhost:5173`
 http://localhost:3000/api
 ```
 
-| Method | Endpoint | Deskripsi |
-|--------|----------|-----------|
-| GET | `/products` | Mendapatkan semua produk |
-| GET | `/products/:id` | Mendapatkan produk by ID |
-| POST | `/products` | Membuat produk baru |
-| PUT | `/products/:id` | Mengupdate produk |
-| DELETE | `/products/:id` | Menghapus produk |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/products` | Get all products |
+| GET | `/products/:id` | Get product by ID |
+| POST | `/products` | Create new product |
+| PUT | `/products/:id` | Update product |
+| DELETE | `/products/:id` | Delete product |
 
-### Contoh Request Body (POST/PUT)
+### Example Request Body (POST/PUT)
 ```json
 {
-  "name": "Nama Produk",
+  "name": "Product Name",
   "price": 500000,
-  "description": "Deskripsi produk",
+  "description": "Product description",
   "stock": 20
 }
 ```
 
-## 🎯 Cara Penggunaan Aplikasi
+## 🎯 How to Use the Application
 
-1. **Halaman Home** (`/`): Informasi aplikasi
-2. **Lihat Produk** (`/products`): Daftar semua produk
-3. **Tambah Produk** (`/products/create`): Form tambah produk
-4. **Detail Produk**: Klik tombol "Detail" pada card produk
-5. **Edit Produk**: Klik tombol "Edit" di halaman detail
-6. **Hapus Produk**: Klik tombol "Hapus" (akan muncul konfirmasi)
+1. **Home Page** (`/`): Application information
+2. **View Products** (`/products`): List all products
+3. **Add Product** (`/products/create`): Add product form
+4. **Product Details**: Click "Detail" button on product card
+5. **Edit Product**: Click "Edit" button on detail page
+6. **Delete Product**: Click "Delete" button (confirmation will appear)
 
 ## 🔍 Troubleshooting
 
@@ -192,16 +192,16 @@ http://localhost:3000/api
 
 **Database Connection Error**
 ```bash
-# Cek koneksi MySQL
+# Check MySQL connection
 mysql -u root -p -e "SHOW DATABASES;"
 
 # Test endpoint
 curl http://localhost:3000/api/products
 ```
 
-**Port 3000 sudah digunakan**
+**Port 3000 already in use**
 ```bash
-# Ganti PORT di .env
+# Change PORT in .env
 PORT=3001
 
 # Restart server
@@ -212,11 +212,11 @@ node server.js
 
 **API Connection Error**
 ```bash
-# Pastikan backend berjalan
+# Make sure backend is running
 curl http://localhost:3000/api/products
 
-# Cek file src/services/api.js
-# Pastikan API_BASE_URL = 'http://localhost:3000/api'
+# Check src/services/api.js file
+# Make sure API_BASE_URL = 'http://localhost:3000/api'
 ```
 
 **Module Not Found**
@@ -227,33 +227,33 @@ npm install
 
 **CORS Error**
 ```bash
-# Pastikan di server.js ada:
+# Make sure in server.js there is:
 app.use(cors());
 ```
 
-## ⚡ Quick Start (Ringkasan)
+## ⚡ Quick Start (Summary)
 
 ```bash
 # 1. Clone repository
 git clone <repository-url>
 cd product-management
 
-# 2. Setup database (jalankan SQL di atas)
+# 2. Setup database (run SQL above)
 
-# 3. Jalankan backend
-cd simple-product-api
+# 3. Run backend
+cd express-backend
 npm install
-cp .env.example .env  # edit sesuai konfigurasi
+cp .env.example .env  # edit according to your configuration
 node server.js
 
-# 4. Jalankan frontend (terminal baru)
-cd product-react-frontend
+# 4. Run frontend (new terminal)
+cd react-frontend
 npm install
 npm run dev
 ```
 
-Akses aplikasi di `http://localhost:5173`
+Access the application at `http://localhost:5173`
 
-## 📞 Kontak
+## 📞 Contact
 
-Jika ada pertanyaan atau masalah, silakan buat issue di repository.
+If you have any questions or issues, please create an issue in the repository.
