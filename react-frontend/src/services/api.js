@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.API_BASE_URL;
+const API_BASE_URL = https:"http://localhost:300/api"
 
 // Fungsi untuk handle response
 async function handleResponse(response) {
